@@ -16,6 +16,7 @@ import az.ibar.etaskify.etaskify.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -46,6 +47,7 @@ public class CustomerService {
     }
 
 
+    @Transactional
     public BaseResponse addUser(UserDTO userDTO) {
         UserEntity userEntity = new UserEntity();
         Optional<CustomerEntity> customerEntity = customerRepository.findById(userDTO.getCustomerId());
@@ -67,10 +69,4 @@ public class CustomerService {
         return br;
     }
 
-    public BaseResponse addTask(TaskDTO taskDTO) {
-        BaseResponse br = new BaseResponse(StatusCode.SUCCESS);
-
-
-        return br;
-    }
 }
