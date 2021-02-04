@@ -15,6 +15,7 @@ import org.springframework.mail.MailSender;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 
 @Service
@@ -38,6 +39,7 @@ public class TaskService {
         return br;
     }
 
+    @Transactional
     public BaseResponse assignUser(TaskUserDTO taskUserDTO) {
         BaseResponse br = new BaseResponse(StatusCode.SUCCESS);
         EmailSender emailSender = new EmailSender(javaMailSender);
