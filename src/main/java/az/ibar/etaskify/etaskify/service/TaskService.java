@@ -53,15 +53,4 @@ public class TaskService {
     }
 
 
-//    public BaseResponse assignTask(TaskUserDTO taskUserDTO) {
-//        BaseResponse br = new BaseResponse(StatusCode.SUCCESS);
-//        UserEntity userEntity = userRepository.findById(taskUserDTO.getUserId()).get();
-//        TaskEntity taskEntity = taskRepository.findById(taskUserDTO.getTaskId()).get();
-//        userEntity.getTasks().add(taskEntity);
-//        br.setData(userRepository.save(userEntity));
-//
-//        return br;
-//    }
-
-
 }
