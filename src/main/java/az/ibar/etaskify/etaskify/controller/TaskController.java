@@ -26,12 +26,5 @@ public class TaskController {
         return taskService.assignUser(taskUserDTO);
     }
 
-//    @PostMapping(value = "/assigntask")
-//    public BaseResponse assignTask(@RequestBody TaskUserDTO taskUserDTO){
-//        return taskService.assignTask(taskUserDTO);
-//    }
-
-
-
 
 }

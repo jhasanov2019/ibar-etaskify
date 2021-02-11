@@ -3,7 +3,6 @@ package az.ibar.etaskify.etaskify.controller;
 
 import az.ibar.etaskify.etaskify.dto.BaseResponse;
 import az.ibar.etaskify.etaskify.dto.CustomerDTO;
-import az.ibar.etaskify.etaskify.dto.TaskDTO;
 import az.ibar.etaskify.etaskify.dto.UserDTO;
 import az.ibar.etaskify.etaskify.service.CustomerService;
 import lombok.AllArgsConstructor;

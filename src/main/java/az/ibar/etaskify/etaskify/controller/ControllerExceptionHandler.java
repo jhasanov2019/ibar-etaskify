@@ -17,11 +17,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestControllerAdvice
 public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
 
-//    @ExceptionHandler(EmployeeNotFoundException.class)
-//    public ResponseEntity<BaseResponse> applicationException(EmployeeNotFoundException e){
-//        return new ResponseEntity<>(setMessage (e.getMessage ()), HttpStatus.NOT_FOUND);
-//    }
-
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<BaseResponse> exceptions(Throwable e) {
         return new ResponseEntity<>(setMessage(e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -33,10 +28,6 @@ public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<> (setMessage (e.getMessage ()), HttpStatus.NOT_FOUND);
     }
 
-//    @ExceptionHandler(NoHandlerFoundException.class)
-//    public ResponseEntity<BaseResponse> applicationException(NoHandlerFoundException ex) {
-//        return new ResponseEntity<> (setMessage (ex.getMessage ()), HttpStatus.NOT_FOUND);
-//    }
 
 
 
